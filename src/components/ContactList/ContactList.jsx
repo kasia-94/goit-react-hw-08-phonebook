@@ -6,8 +6,8 @@ import {
   selectContacts,
   selectError,
   selectLoading,
-} from 'redux/selectors';
-import { fetchContacts, deleteContact } from 'redux/operations';
+} from 'redux/contacts/selectors';
+import { fetchContacts, deleteContact } from 'redux/contacts/operations';
 import { Loader } from 'components/Loader/Loader';
 
 const ContactList = () => {
