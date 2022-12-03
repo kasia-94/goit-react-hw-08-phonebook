@@ -1,5 +1,12 @@
+import { RegisterForm } from 'components/RegisterForm/RegisterForm';
+
 const Register = () => {
-  return <p>Create a new account or log in, if you have it!</p>;
+  return (
+    <>
+      <title>Registration</title>
+      <RegisterForm />
+    </>
+  );
 };
 
 export default Register;
