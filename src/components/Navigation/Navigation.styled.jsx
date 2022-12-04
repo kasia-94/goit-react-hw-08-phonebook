@@ -17,16 +17,19 @@ export const MenuItem = styled.li`
 
 export const MenuLink = styled(NavLink)`
   font-weight: 500;
-  font-size: 20px;
-  color: white;
+  font-size: 25px;
+  color: purple;
   text-decoration: none;
   transition: 250ms color ease;
 
   :hover,
   :focus {
-    color: #060c30;
+    color: white;
   }
   &.active {
-    color: #060c30;
+    color: white;
+  }
+  &:not(:last-child) {
+    margin-right: 40px;
   }
 `;

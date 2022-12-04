@@ -10,7 +10,7 @@ export const Input = styled.input`
   :active,
   :hover,
   :focus {
-    border-color: #6a6aec;
+    border-color: purple;
   }
 `;
 

@@ -2,6 +2,10 @@ import styled from '@emotion/styled';
 
 export const List = styled.ul`
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const Button = styled.button`
@@ -15,8 +19,8 @@ export const Button = styled.button`
   transition: background-color 250ms ease, border-color 250ms ease;
   :active,
   :hover {
-    background-color: #6a6aec;
-    border-color: #6a6aec;
+    background-color: purple;
+    border-color: purple;
   }
 `;
 

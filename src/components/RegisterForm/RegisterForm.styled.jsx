@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 
-export const Form = styled.form`
+export const FormField = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-right: auto;
   margin-left: auto;
   width: 500px;
@@ -42,4 +43,8 @@ export const Button = styled.button`
     background-color: #6a6aec;
     border-color: #6a6aec;
   }
+`;
+
+export const Title = styled.h1`
+  color: purple;
 `;

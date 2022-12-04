@@ -43,3 +43,7 @@ export const Button = styled.button`
     border-color: #6a6aec;
   }
 `;
+
+export const Title = styled.h1`
+  color: purple;
+`;

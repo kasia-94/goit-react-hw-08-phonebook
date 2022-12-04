@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { List, Button, Item, Name } from './ContactList.styled';
+import { List } from './ContactList.styled';
 import {
   selectFilter,
   selectContacts,
@@ -9,6 +9,15 @@ import {
 } from 'redux/contacts/selectors';
 import { fetchContacts, deleteContact } from 'redux/contacts/operations';
 import { Loader } from 'components/Loader/Loader';
+import toast from 'react-hot-toast';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import { Center } from '@chakra-ui/react';
+import { purple } from '@mui/material/colors';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
@@ -29,22 +38,54 @@ const ContactList = () => {
     );
   };
 
+  const bull = (
+    <Box
+      component="span"
+      sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
+    >
+      •
+    </Box>
+  );
+
   return (
     <>
       {isLoading && <Loader />}
-      {error && <p>{error}</p>}
+      {error && toast.error(`${error.message}`)}
       {contacts.length > 0 && (
-        <List>
-          {showContact().map(({ id, name, number }) => (
-            <Item key={id}>
-              <Name>{name}:</Name>
-              <p>{number}</p>
-              <Button type="button" onClick={() => dispatch(deleteContact(id))}>
-                Delete
-              </Button>
-            </Item>
-          ))}
-        </List>
+        <>
+          <List>
+            {showContact().map(({ id, name, number }) => (
+              <Card
+                sx={{
+                  minWidth: 250,
+                  marginRight: 5,
+                  marginBottom: 5,
+                  color: 'purple',
+                }}
+                key={id}
+              >
+                <CardContent>
+                  <Typography variant="h5" component="div">
+                    {bull}
+                    {name}
+                    {bull}
+                  </Typography>
+                  <Typography>{number}</Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="secondary"
+                    variant="contained"
+                    onClick={() => dispatch(deleteContact(id))}
+                  >
+                    Delete
+                  </Button>
+                </CardActions>
+              </Card>
+            ))}
+          </List>
+        </>
       )}
     </>
   );

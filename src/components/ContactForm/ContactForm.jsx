@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { Form, Label, Input, Button } from './ContactForm.styled';
+import { Form, Label, Input } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
+import toast from 'react-hot-toast';
+import Button from '@mui/material/Button';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -36,7 +38,14 @@ const ContactForm = () => {
         contact => contact.name.toLowerCase() === name.toLowerCase()
       )
     ) {
-      return alert(`${name} is already in contacts`);
+      return toast.error(`${name} is already in contacts`);
+    }
+    if (
+      contacts.find(
+        contact => contact.number.toLowerCase() === number.toLowerCase()
+      )
+    ) {
+      return toast.error(`${number} is already added`);
     }
     dispatch(addContact({ name, number }));
     reset();
@@ -69,7 +78,9 @@ const ContactForm = () => {
         />
       </Label>
 
-      <Button type="submit">Add contact</Button>
+      <Button color="secondary" type="submit" variant="contained">
+        Add contact
+      </Button>
     </Form>
   );
 };

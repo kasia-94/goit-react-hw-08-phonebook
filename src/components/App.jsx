@@ -13,6 +13,7 @@ const Layout = lazy(() => import('../components/Layout'));
 const Register = lazy(() => import('../pages/Register/Register'));
 const Login = lazy(() => import('../pages/Login/Login'));
 const Contacts = lazy(() => import('../pages/Contacts/Contacts'));
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
 
 export function App() {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ export function App() {
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
           <Route
             path="register"
             element={

@@ -4,6 +4,8 @@ export const AppBarHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #2a363b;
+  font-size: 30px;
+  padding: 15px 25px;
+  border-bottom: 2px solid #2a363b;
+  background-color: #80008039;
 `;

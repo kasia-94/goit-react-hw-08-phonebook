@@ -1,19 +1,30 @@
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/operations';
-import { Title } from './LoginForm.styled';
-import Button from '@mui/material/Button';
-import CheckIcon from '@mui/icons-material/Check';
+import { register } from 'redux/auth/operations';
+// import * as Yup from 'yup';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import { Title } from './RegisterForm.styled';
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
   const dispatch = useDispatch();
+  // const signupSchema = Yup.object().shape({
+  //   name: Yup.string().min(2, 'Too Short!').required('This field is required'),
+  //   email: Yup.string()
+  //     .email('Invalid email')
+  //     .required('This field is required'),
+  //   password: Yup.string()
+  //     .min(2, 'Too Short!')
+  //     .required('This field is required'),
+  // });
 
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
     dispatch(
-      logIn({
+      register({
+        name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
@@ -23,7 +34,7 @@ export const LoginForm = () => {
 
   return (
     <>
-      <Title>Login to your account</Title>
+      <Title>Registration</Title>
       <Box
         component="form"
         sx={{
@@ -36,6 +47,14 @@ export const LoginForm = () => {
         display="flex"
         flexDirection="column"
       >
+        <TextField
+          id="name"
+          label="Username"
+          variant="outlined"
+          type="text"
+          name="name"
+          color="secondary"
+        />
         <TextField
           id="email"
           label="Email"
@@ -56,25 +75,11 @@ export const LoginForm = () => {
           color="secondary"
           type="submit"
           variant="contained"
-          endIcon={<CheckIcon />}
+          endIcon={<HowToRegIcon />}
         >
-          Log In
+          Register
         </Button>
       </Box>
     </>
-
-    // <Form onSubmit={handleSubmit} autoComplete="off">
-    //   <Label>
-    //     Email
-    //     <Input type="email" name="email" />
-    //   </Label>
-    //   <Label>
-    //     Password
-    //     <Input type="password" name="password" />
-    //   </Label>
-    //   <Button variant="outlined" type="submit">
-    //     Log In
-    //   </Button>
-    // </Form>
   );
 };
