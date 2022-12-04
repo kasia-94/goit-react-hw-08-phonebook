@@ -4,14 +4,12 @@ import { Filter } from 'components/Filter/Filter';
 import { NonLoginPage } from 'components/NonLoginPage/NonLoginPage';
 import { useAuth } from 'hooks/useAuth';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
-import { selectLoading } from 'redux/contacts/selectors';
 import { ContactsBox } from './Contacts.styled';
 
 const Contacts = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectLoading);
   const { isLoggedIn } = useAuth();
 
   useEffect(() => {

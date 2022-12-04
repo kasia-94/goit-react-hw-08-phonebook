@@ -16,8 +16,6 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Center } from '@chakra-ui/react';
-import { purple } from '@mui/material/colors';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
