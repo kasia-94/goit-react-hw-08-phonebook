@@ -5,7 +5,7 @@ export const AppBarHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   font-size: 30px;
-  padding: 15px 25px;
-  border-bottom: 2px solid #2a363b;
-  background-color: #80008039;
+  padding: 15px 15px;
+  border-bottom: 2px solid #404b27eb;
+  background-color: #0a44087f;
 `;

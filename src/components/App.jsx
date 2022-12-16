@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-// import { Title, Section } from './App.styled';
 import { useDispatch } from 'react-redux';
 // import { useAuth } from 'hooks/useAuth';
 import { useEffect } from 'react';

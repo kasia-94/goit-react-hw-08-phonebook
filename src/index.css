@@ -7,7 +7,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #4806c21e;
+  background-image: linear-gradient(to right, #084e1933, #084e1933),
+    url('../src/images/background.png');
+  max-width: 100%;
+  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: rgb(12, 63, 12);
 }
 
 code {

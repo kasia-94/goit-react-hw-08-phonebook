@@ -25,7 +25,7 @@ export const Input = styled.input`
   :active,
   :hover,
   :focus {
-    border-color: #6a6aec;
+    border-color: rgb(12, 63, 12);
   }
 `;
 
@@ -39,11 +39,11 @@ export const Button = styled.button`
   transition: background-color 250ms ease, border-color 250ms ease;
   :active,
   :hover {
-    background-color: #6a6aec;
-    border-color: #6a6aec;
+    background-color: rgb(12, 63, 12);
+    border-color: rgb(12, 63, 12);
   }
 `;
 
 export const Title = styled.h1`
-  color: purple;
+  text-align: center;
 `;

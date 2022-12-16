@@ -7,11 +7,6 @@ export const Input = styled.input`
   width: 200px;
   border: 2px solid black;
   transition: border-color 250ms ease;
-  :active,
-  :hover,
-  :focus {
-    border-color: purple;
-  }
 `;
 
 export const Label = styled.label`

@@ -6,7 +6,6 @@ export const UserLink = styled.div`
   align-items: center;
   font-weight: 500;
   font-size: 25px;
-  color: purple;
   text-decoration: none;
   transition: 250ms color ease;
 `;
@@ -14,4 +13,12 @@ export const UserLink = styled.div`
 export const UserName = styled.p`
   margin-right: 10px;
   margin-left: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgb(12, 63, 12);
+
+  @media screen and (min-width: 768px) {
+    margin-right: 20px;
+    font-size: 25px;
+  }
 `;

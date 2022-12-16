@@ -58,7 +58,7 @@ const ContactList = () => {
                   minWidth: 250,
                   marginRight: 5,
                   marginBottom: 5,
-                  color: 'purple',
+                  color: 'rgb(12, 63, 12);',
                 }}
                 key={id}
               >
@@ -73,7 +73,7 @@ const ContactList = () => {
                 <CardActions>
                   <Button
                     size="small"
-                    color="secondary"
+                    color="success"
                     variant="contained"
                     onClick={() => dispatch(deleteContact(id))}
                   >

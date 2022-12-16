@@ -4,7 +4,6 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
   padding: 10px;
   border: 2px solid black;
 `;
@@ -24,21 +23,6 @@ export const Input = styled.input`
   :active,
   :hover,
   :focus {
-    border-color: purple;
-  }
-`;
-
-export const Button = styled.button`
-  width: 100px;
-  text-transform: capitalize;
-  cursor: pointer;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  background-color: white;
-  transition: background-color 250ms ease, border-color 250ms ease;
-  :active,
-  :hover {
-    background-color: purple;
-    border-color: purple;
+    border-color: rgb(12, 63, 12);
   }
 `;

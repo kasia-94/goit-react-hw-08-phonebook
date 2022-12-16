@@ -41,7 +41,6 @@ export const RegisterForm = () => {
           '& > :not(style)': { m: 1, width: '25ch' },
         }}
         noValidate
-        color="purple"
         autoComplete="off"
         onSubmit={handleSubmit}
         display="flex"
@@ -53,7 +52,7 @@ export const RegisterForm = () => {
           variant="outlined"
           type="text"
           name="name"
-          color="secondary"
+          color="success"
         />
         <TextField
           id="email"
@@ -61,7 +60,7 @@ export const RegisterForm = () => {
           variant="outlined"
           type="email"
           name="email"
-          color="secondary"
+          color="success"
         />
         <TextField
           id="password"
@@ -69,10 +68,10 @@ export const RegisterForm = () => {
           variant="outlined"
           type="password"
           name="password"
-          color="secondary"
+          color="success"
         />
         <Button
-          color="secondary"
+          color="success"
           type="submit"
           variant="contained"
           endIcon={<HowToRegIcon />}

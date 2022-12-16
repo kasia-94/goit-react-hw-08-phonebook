@@ -7,7 +7,7 @@ export const Loader = () => {
       <Triangle
         height="100"
         width="100"
-        color="purple"
+        color="#404b27eb"
         ariaLabel="triangle-loading"
         wrapperStyle={{}}
         wrapperClassName=""

@@ -2,7 +2,6 @@ import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'hooks/useAuth';
 import { UserLink, UserName } from './UserMenu.styled';
-import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import Button from '@mui/material/Button';
 
 export const UserMenu = () => {
@@ -11,10 +10,9 @@ export const UserMenu = () => {
 
   return (
     <UserLink>
-      <InsertEmoticonIcon />
       <UserName>{user.name}</UserName>
       <Button
-        color="secondary"
+        color="success"
         type="submit"
         variant="contained"
         onClick={() => dispatch(logOut())}

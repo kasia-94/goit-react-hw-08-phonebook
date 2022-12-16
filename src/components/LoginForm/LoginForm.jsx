@@ -30,7 +30,6 @@ export const LoginForm = () => {
           '& > :not(style)': { m: 1, width: '25ch' },
         }}
         noValidate
-        color="purple"
         autoComplete="off"
         onSubmit={handleSubmit}
         display="flex"
@@ -42,7 +41,7 @@ export const LoginForm = () => {
           variant="outlined"
           type="email"
           name="email"
-          color="secondary"
+          color="success"
         />
         <TextField
           id="password"
@@ -50,10 +49,10 @@ export const LoginForm = () => {
           variant="outlined"
           type="password"
           name="password"
-          color="secondary"
+          color="success"
         />
         <Button
-          color="secondary"
+          color="success"
           type="submit"
           variant="contained"
           endIcon={<CheckIcon />}

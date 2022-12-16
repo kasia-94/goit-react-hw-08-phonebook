@@ -6,6 +6,7 @@ export const List = styled.ul`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 `;
 
 export const Button = styled.button`
@@ -19,8 +20,8 @@ export const Button = styled.button`
   transition: background-color 250ms ease, border-color 250ms ease;
   :active,
   :hover {
-    background-color: purple;
-    border-color: purple;
+    background-color: rgb(12, 63, 12);
+    border-color: rgb(12, 63, 12);
   }
 `;
 

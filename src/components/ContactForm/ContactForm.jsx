@@ -78,7 +78,7 @@ const ContactForm = () => {
         />
       </Label>
 
-      <Button color="secondary" type="submit" variant="contained">
+      <Button color="success" type="submit" variant="contained">
         Add contact
       </Button>
     </Form>

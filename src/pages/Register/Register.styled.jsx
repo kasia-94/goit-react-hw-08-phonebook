@@ -7,6 +7,6 @@ export const RegisterBox = styled.div`
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  width: 500px;
+  min-height: calc(110vh - 200px);
   padding: 10px;
 `;

@@ -7,6 +7,6 @@ export const ContactsBox = styled.div`
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
+  min-height: calc(100vh - 150px);
   padding: 10px;
-  color: purple;
 `;
