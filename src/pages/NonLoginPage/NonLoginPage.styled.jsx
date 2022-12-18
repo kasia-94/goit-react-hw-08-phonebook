@@ -1,18 +1,12 @@
 import styled from '@emotion/styled';
 
-export const ContactsBox = styled.div`
+export const NonLoginBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  min-height: calc(100vh - 150px);
+  min-height: calc(110vh - 200px);
   padding: 10px;
-`;
-
-export const TitleSecond = styled.h2`
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;

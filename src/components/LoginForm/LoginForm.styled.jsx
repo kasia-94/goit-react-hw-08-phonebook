@@ -44,6 +44,6 @@ export const Button = styled.button`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   text-align: center;
 `;

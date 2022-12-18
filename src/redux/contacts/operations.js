@@ -50,3 +50,19 @@ export const updateContact = createAsyncThunk(
     }
   }
 );
+
+//NEED TO CHANDE BACKEND
+
+export const toggleLiked = createAsyncThunk(
+  'contacts/toggleLiked',
+  async (contactId, thunkAPI) => {
+    try {
+      const response = await axios.put(`/contacts/${contactId}`, {
+        selected: !contactId.selected,
+      });
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
