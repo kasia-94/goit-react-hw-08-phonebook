@@ -77,7 +77,7 @@ const ContactList = () => {
                       Delete
                     </Button>
                   </CardActions>
-                  <CardActions>
+                  {/* <CardActions>
                     <ButtonSelected
                       color="success"
                       variant="contained"
@@ -85,7 +85,7 @@ const ContactList = () => {
                     >
                       <FavoriteIcon />
                     </ButtonSelected>
-                  </CardActions>
+                  </CardActions> */}
                 </ButtonList>
               </Card>
             ))}

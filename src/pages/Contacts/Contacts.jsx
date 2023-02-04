@@ -38,8 +38,8 @@ const Contacts = () => {
             />
             Contacts
           </TitleSecond>
-          <Filter />
-          <FilterStatus />
+          {/* <Filter />
+          <FilterStatus /> */}
           <ContactList />
         </ContactsBox>
       ) : (
