@@ -1,6 +1,6 @@
 import ContactForm from 'components/ContactForm/ContactForm';
 import ContactList from 'components/ContactList/ContactList';
-import { Filter } from 'components/Filter/Filter';
+// import { Filter } from 'components/Filter/Filter';
 import { NonLoginPage } from 'pages/NonLoginPage/NonLoginPage';
 import { useAuth } from 'hooks/useAuth';
 import { useEffect } from 'react';
@@ -9,7 +9,7 @@ import { fetchContacts } from 'redux/contacts/operations';
 import { ContactsBox, TitleSecond } from './Contacts.styled';
 import LibraryBooksTwoToneIcon from '@mui/icons-material/LibraryBooksTwoTone';
 import PermContactCalendarTwoToneIcon from '@mui/icons-material/PermContactCalendarTwoTone';
-import { FilterStatus } from 'components/FilterStatus/FilterStatus';
+// import { FilterStatus } from 'components/FilterStatus/FilterStatus';
 
 const Contacts = () => {
   const dispatch = useDispatch();

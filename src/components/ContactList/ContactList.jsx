@@ -11,7 +11,7 @@ import {
 import {
   fetchContacts,
   deleteContact,
-  toggleLiked,
+  // toggleLiked,
 } from 'redux/contacts/operations';
 import { Loader } from 'components/Loader/Loader';
 import toast from 'react-hot-toast';
@@ -22,7 +22,7 @@ import {
   Typography,
   Button,
 } from '@mui/material';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+// import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const ContactList = () => {
   const contacts = useSelector(selectContacts);
